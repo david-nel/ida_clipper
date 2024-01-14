@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="sidepanel.css">
+  <title>Ida Web Clipper</title>
+</head>
+<body>
+
+    <div id="loading-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="header">
+        <h1>Ida Web Clipper</h1>
+        <button class="form-button" type="button">Logout</button>
+
+        <p>
+            <div class="webpage-container">
+                <label for="webpage">Webpage</label>
+                <button id="reload" class="icon-button">
+                    <img class="icon" src="images/reload.png">
+                </button>
+            </div>
+            <textarea id="webpage" readonly></textarea>
+            <span id="webpage-message"></span>
+        </p>
+    </div>
+
+    <section id="login-page" class="active">
+        <h2>Login</h2>
+        
+        <form id="login">
+            <label for="uuid">User ID:</label>
+            <input type="text" id="uuid" value="INfqP8ZATtOVn.8HpDcjXg" required autocomplete="off">
+
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="ffe-page">
+        <form>
+            <h1>Add FFE item</h1>
+
+            <p>
+                <label for="ffe-name">Name</label>
+                <input type="text" id="ffe-name" required autocomplete="off">
+            </p>
+
+            <div>
+                <h2 class="image-heading selected">Main image</h2>
+                <div id="ffe-main-image">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div>
+                <h2 class="image-heading">Supporting images</h2>
+                <div id="ffe-supporting-images">
+                    
+                </div>
+            </div>
+
+            <p>
+                <label for="ffe-category">Category</label>
+                <select id="ffe-category" class="dropdown" required>
+                    <option value="" disabled selected>Select a category</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="ffe-project">Project</label>
+                <select id="ffe-project" class="dropdown">
+                    <option value="" disabled selected>Select a project</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="ffe-sku">SKU</label>
+                <input type="text" id="ffe-sku" autocomplete="off">
+            </p>
+
+            <p>
+                <label for="ffe-colour">Colour</label>
+                <input type="text" id="ffe-colour" autocomplete="off">
+            </p>
+
+            <p>
+                <label for="ffe-cost">Cost</label>
+                <input type="text" id="ffe-cost" autocomplete="off">
+            </p>
+
+            <p>
+                <label for="ffe-dimensions">Dimensions</label>
+                <input type="text" id="ffe-dimensions" autocomplete="off">
+            </p>
+
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="supplier-page">
+        <p class="message"></p>
+
+        <form>
+            <h1>Add CRM Company</h1>
+
+            <p>
+                <label for="supplier-name">Name</label>
+                <input type="text" id="supplier-name" required autocomplete="off">
+            </p>
+
+            <button class="form-button" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="sidepanel.js"></script>
+</body>
+</html>

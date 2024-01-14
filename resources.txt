@@ -1,0 +1,114 @@
+https://alexleybourne.github.io/chrome-extension-icon-generator/
+https://oss.mobilefirst.me/extension-cli/
+https://www.apollographql.com/blog/graphql/basics/the-anatomy-of-a-graphql-query/
+https://www.apollographql.com/docs/react/get-started/
+https://medium.com/@tharshita13/creating-a-chrome-extension-with-react-a-step-by-step-guide-47fe9bab24a1
+
+
+Hours:
+29 Nov
+13:00 - 13:30
+14:45 - 15:15
+15:50 - 16:30
+19:45 - 20:30
+30 + 30 + 40 + 45 = 145
+
+30 Nov
+19:25 - 20:40
+21:00 - 22:05
+75 + 65 = 140
+
+5 December
+11:15 - 12:45
+13:25 - 14:45
+21:15 - 21:55
+90 + 80 + 35 = 210
+
+7 December
+19:45 - 20:30
+45
+
+8 December
+20:40 - 21:10
+30
+
+9 December
+10:45 - 11:45
+12:10 - 13:20
+15:00 - 15:45
+18:00 - 19:00
+20:00 - 21:00
+295
+
+11 December
+10:50 - 12:30
+14:55 - 15:40
+145
+
+12 December
+9:50 - 10:30
+15:10 - 16:30
+23:25 - 00:15
+170
+
+13 December
+10:00 - 11:00
+11:30 - 12:30
+120
+
+14 December
+9:00 - 11:15
+14:20 - 15:15
+15:45 - 16:45
+17:20 - 17:40
+20:50 - 22:00
+135 + 55 + 60 + 20 + 70 = 340
+
+15 December
+19:15 - 20:45
+21:15 - 22:30
+90 + 75 = 165
+
+17 December
+17:20 - 18:30
+21:50 - 23:00
+70 + 70 = 140
+
+19 December
+10:40 - 12:00
+22:20 - 23:00
+80 + 40 = 120
+
+20 December
+16:40 - 18:20
+100
+
+21 December
+16:30 - 18:00
+90
+
+22 December
+23:25 - 00:15
+50
+
+23 December
+23:15 - 00:45
+90
+
+24 December
+08:00 - 08:45
+09:55 - 11:00
+14:45 - 15:45
+22:40 - 00:30
+45 + 65 + 60 + 110 = 280
+
+25 December
+21:00 - 22:00
+22:25 - 22:45
+
+26 December
+10:00 - 11:30
+14:25 - 15:05
+
+7 January
+20:20 - 
