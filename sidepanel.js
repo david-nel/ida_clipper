@@ -9,6 +9,7 @@
 let currentUrl = "";
 let uid = "";
 let orgId = "";
+let submitDuplicate = false;
 
 let ffe_form_data = {
     main_image: "",
@@ -99,6 +100,19 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         var tabs = await chrome.tabs.query({ active: true, currentWindow: true });
         setUrl(tabs[0].url);
+    }
+
+    var dup_btn = document.getElementById("duplicate-btn");
+    dup_btn.onclick = function () {
+        submitDuplicate = !submitDuplicate;
+
+        if (submitDuplicate) {
+            dup_btn.innerText = "Cancel";
+        } else {
+            dup_btn.innerText = "Submit anyway";
+        }
+
+        navigateTo("ffe-page");
     }
 
     // add remove on right click functionality for main image
@@ -204,6 +218,9 @@ function navigateTo(pageId) {
     if (selectedSection) {
         selectedSection.classList.add('active');
     }
+
+    var dup_btn = document.getElementById("duplicate-btn");
+    dup_btn.style.display = 'none';
 
     if (pageId === "ffe-page") {
         transitionToFFE();
@@ -429,9 +446,7 @@ async function enforceLogin() {
 
 async function transitionToFFE() {
     var exists = await ffeItemExists(currentUrl);
-    if (!exists["global"] || (exists["global"] && !exists["local"])) {
-        displayMessage("", false);
-
+    if (!exists["global"] || (exists["global"] && !exists["local"]) || submitDuplicate) {
         const ffe_form = document.getElementById("ffe-page").getElementsByTagName("form")[0];
         clearForm(ffe_form);
         ffe_form_data.main_image = "";
@@ -442,6 +457,8 @@ async function transitionToFFE() {
         ffe_btn.onclick = ffe_submit(exists["global"]);
     } else {
         displayMessage("This item already exists in the database. Visit another item url to add a new entry.", true);
+        var dup_btn = document.getElementById("duplicate-btn");
+        dup_btn.style.display = 'block';
     }
 }
 
@@ -477,6 +494,10 @@ function ffe_submit(gId) {
         loader.style.display = 'block';
         await uploadFFEItem(gId, params);
         loader.style.display = 'none';
+
+        // reset submitDuplicate back to false and change button text correspondingly
+        var dup_btn = document.getElementById("duplicate-btn");
+        dup_btn.click();
 
         transitionToFFE();
     }
@@ -655,7 +676,8 @@ async function uploadOrganisationFFEItem(params) {
             "RWJXT": orgId, //organisationId
             "KgzGY": params["dimensions"], //dimensions
             "tnIaQ": params["category"], //category
-            "6RcDK": params["globalFFEId"] //globalFfEId
+            "6RcDK": params["globalFFEId"], //globalFfEId
+            "BqOUj": uid,
         }
     );
 

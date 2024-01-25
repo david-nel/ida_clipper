@@ -126,6 +126,7 @@ input[type=text]:focus, textarea:focus {
 }
 
 .form-button {
+    display: block;
     appearance: none;
     border-radius: 6px;
     margin: 15px 0;
@@ -338,4 +339,3 @@ input:checked + .slider:before {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
